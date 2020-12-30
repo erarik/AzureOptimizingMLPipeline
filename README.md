@@ -9,7 +9,7 @@ This model is then compared to an Azure AutoML run.
 This dataset contains data about a marketing campaigns on bank clients and whether they will subscribe to a fixed term deposit.
 We seek to predict if the client will subscribe a term deposit (variable y) which is later identified as the target column for predictions
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+The best performing model was the prefitted soft VotingClassifier with an accuracy of 0.9166. The custom model LogisticRegression with HyperDrive reached an accuracy of 0.9088 
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
