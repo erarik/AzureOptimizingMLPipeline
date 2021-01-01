@@ -19,6 +19,7 @@ The training script will create a dataset from csv file. The dataset is cleaned 
 The training script will train the logistic regression using 2 hyperparameters:
 * --C: Inverse of regularization strength. Regularization is applying a penalty to increasing the magnitude of parameter values in order to reduce overfitting. Smaller values cause stronger regularization.
 * --max_iter : Maximum number of iterations to converge
+
 The trained model is then saved in a file and its accuracy metrics is logged to Azure ML run using the Run object within the script.
 
 **What are the benefits of the parameter sampler you chose?**
