@@ -9,10 +9,17 @@ This model is then compared to an Azure AutoML run.
 This dataset contains data about a marketing campaigns on bank clients and whether they will subscribe to a fixed term deposit.
 We seek to predict if the client will subscribe a term deposit (variable y) which is later identified as the target column for predictions
 
-The best performing model was the prefitted soft VotingClassifier with an accuracy of 0.9166. The custom model LogisticRegression with HyperDrive reached an accuracy of 0.9088 
+The best performing model was the prefitted soft VotingClassifier with an accuracy of 0.9166. It was obtained with autoML. The custom model LogisticRegression with HyperDrive reached an accuracy of 0.9088 
 
 ## Scikit-learn Pipeline
-**Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+Azure Machine Learning HyperDrive will be used to automate hyperparameter tuning and run experiments in parallel to efficiently optimize hyperparameters.
+We start coding the custom model in a training script which will be run by HyperDrive. The model chosen is a logistic regression from scikit-learn.
+Logistic Regression is used when the target variable is categorical. In our case, the categorical response has only two 2 possible outcomes: subscribe to fixed deposit or not
+The training script will create a dataset from csv file. The dataset is cleaned by converting categorical variable into dummy/indicator variables and applying one hot encoding for month and for days of the week. We then split the dataset into 25% for test and 75% for training. 
+The training script will train the logistic regression using 2 hyperparameters:
+* --C: Inverse of regularization strength. Regularization is applying a penalty to increasing the magnitude of parameter values in order to reduce overfitting. Smaller values cause stronger regularization.
+* --max_iter : Maximum number of iterations to converge
+The trained model is then saved in a file and its accuracy metrics is logged to Azure ML run using the Run object within the script.
 
 **What are the benefits of the parameter sampler you chose?**
 
