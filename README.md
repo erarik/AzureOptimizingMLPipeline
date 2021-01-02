@@ -34,7 +34,7 @@ The primary metric is accuracy. The goal of the hyperparameter tuning will be to
 
 
 ## AutoML
-We have run AutoML classification experiment using accuracy as the primary metric with experiment timeout minutes set to 30 minutes and 5 cross-validation folds. After 25 methods tested, the best method obtained is VotingEnsemble with an accuracy of 0.9166
+We have run AutoML classification experiment using accuracy as the primary metric with experiment timeout minutes set to 30 minutes and 5 cross-validation folds. After 25 methods tested, the best model obtained is VotingEnsemble with an accuracy of 0.9166 and all hyperparameters tunned. We found hyperparameters to control the growth of Decision Trees (min_samples_leaf, and so on), as well as hyperparameters to control the ensemble training, such as the number of trees (n_estimators).
 
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
