@@ -60,5 +60,4 @@ On Hyperparameter optimization using HyperDrive, It will be interesting to see i
 AutoML currently supports a bunch of models, it will be interesting to check what are the templates used in the ML models. It will be also interesting to compare the result obtained with Azure AutoML and google AutoML.
 
 ## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+![Delete Compute Clusters](https://github.com/erarik/AzureOptimizingMLPipeline/blob/master/DeleteComputeClusters.png)
