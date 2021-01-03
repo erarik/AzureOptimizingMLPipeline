@@ -37,7 +37,22 @@ The primary metric is accuracy. The goal of the hyperparameter tuning will be to
 We have run AutoML classification experiment using accuracy as the primary metric with experiment timeout minutes set to 30 minutes and 5 cross-validation folds. After 25 methods tested, the best model obtained is VotingEnsemble with an accuracy of 0.9166 and all hyperparameters tunned. We found hyperparameters to control the growth of Decision Trees (min_samples_leaf, and so on), as well as hyperparameters to control the ensemble training, such as the number of trees (n_estimators).
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+The following steps must be completed using Hyperdrive : 
+*	Clean data
+*	Define the parameter search space
+*	Specify a primary metric to optimize
+*	Specify early termination policy for low-performing runs
+*	Allocate resources
+*	Launch an experiment with the defined configuration
+
+With AutoML 
+*	Select experiment type: Classification, Regression, or Time Series Forecasting
+*	Data source, formats, and fetch data
+*	Choose compute target: local or remote
+*	Automated machine learning experiment settings
+*	Run an automated machine learning experiment
+
+With Hyperdrive, we must choose the right model, the right parameter search space, the right primary metric and the right early termination policy. There are many risks of error. With AutoML, all those risks are skipped, this is why AutoML will surely get better performance.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
