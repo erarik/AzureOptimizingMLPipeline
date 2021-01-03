@@ -52,7 +52,7 @@ With AutoML
 *	Automated machine learning experiment settings
 *	Run an automated machine learning experiment
 
-With Hyperdrive, we must choose the right model, the right parameter search space, the right primary metric and the right early termination policy. There are many risks of error. With AutoML, all those risks are skipped, this is why AutoML will surely get better performance.
+With Hyperdrive, we must manually choose the right model, the right parameter search space, the right primary metric and the right early termination policy. There are many risks of error and it requires significant architecture engineering. With AutoML, all those risks are skipped and the various stages in the pipeline are automated, this is why AutoML will surely get better performance.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
