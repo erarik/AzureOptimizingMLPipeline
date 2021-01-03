@@ -55,7 +55,9 @@ With AutoML
 With Hyperdrive, we must manually choose the right model, the right parameter search space, the right primary metric and the right early termination policy. There are many risks of error and it requires significant architecture engineering. With AutoML, all those risks are skipped and the various stages in the pipeline are automated, this is why AutoML will surely get better performance.
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
+On Hyperparameter optimization using HyperDrive, It will be interesting to see if we get better result with Grid or Bayesian parameter sampling method. And also we can choose another primary metric.
+
+AutoML currently supports a bunch of models, it will be interesting to check what are the templates used in the ML models. It will be also interesting to compare the result obtained with Azure AutoML and google AutoML.
 
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
